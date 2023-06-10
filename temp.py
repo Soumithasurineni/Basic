@@ -1,5 +1,6 @@
 from flask import Flask
 #Flask constructor takes the__name__of current module as an argument
+print('hello')
 app=Flask(__name__)
 @app.route('/')
 def welcome():
