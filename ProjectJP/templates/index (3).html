@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+		<link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+    <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<title>Insurance claim fruad</title>
+		<meta name="description"
+			content="" />
+		<meta name="viewport"
+			content="width=device-width,
+					initial-scale=1" />
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				/Display width and height/
+				height: 100vh;
+				width: 100vw;
+				overflow: hidden;
+				font-family: "Lato", sans-serif;
+				font-weight: 700;
+				/* To make all the elements center */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				/Font color and background Color/
+				color: #555;
+				background: #ecf0f3;
+			}
+			.gfg-div {
+				/* Login Card Width and height */
+				width: 1500px;
+				height: 900px;
+				/* padding */
+				padding: 20px 35px 15px 35px;
+				border-radius: 35px;
+				background: #ecf0f3;
+				/* Box-shadow for 3d visualization*/
+				box-shadow:
+				-6px -6px 6px rgba(255, 255, 255, 0.8),
+				6px 6px 6px rgba(0, 0, 0, 0.2);
+			}
+			.gfg-logo {
+				
+        
+				background-size: cover;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				margin: 0 auto;
+				/* Box-shadow for logo */
+				box-shadow: 0px 0px 2px #5f5f5f,
+				0px 0px 0px 5px #ecf0f3,
+				8px 8px 15px #a7aaaf,
+				-8px -8px 15px #ffffff;
+			}
+      .gfg-icon{
+        
+        padding-top: 0px;
+        padding-left: 0px;
+      }
+			.gfg-title {
+				text-align: center;
+				font-size: 28px;
+				padding-top: 24px;
+				letter-spacing: 0.5px;
+				color: #5ed887;
+			}
+			.gfg-sub-title {
+				text-align: center;
+				font-size: 15px;
+				padding-top: 7px;
+				letter-spacing: 3px;
+				color: #5eaa77;
+			}
+	
+		</style>
+				
+	</head>
+	<body>
+		 <!-- .gfg-input-fields { /* input feilds size */
+					float: right;
+					padding: 50px 10px 200px 30px;
+				}
+				.gfg-input-fields1 { /* input feilds size */
+					float: left;
+					padding: 50px 500px 150px 50px;
+				}
+				.gfg-input-fields input {
+	/* To hide default browser options of input field */
+					border: none;
+					outline: none;
+					/* Custom design for the input field */
+					background: none;
+					font-size: 18px;
+					color: #555;
+					padding: 15px 10px 15px 5px;
+				}
+				.gfg-email,
+				.gfg-password,.gfg-noname,.gfg-none {
+					margin-bottom: 20px;
+					border-radius: 20px;
+					/* Box-shadow for 3d */
+					box-shadow: inset 5px 5px 5px #cbced1,
+					inset -5px -5px 5px #ffffff;
+				}
+				.gfg-input-fields svg {
+					height: 22px;
+					margin: 0 10px -3px 25px;
+				}
+				.gfg-button {
+		/* To hide default browser options of input field */
+					outline: none;
+					border: none;
+					/* Custom design for the Button */
+					cursor: pointer;
+					width: 40%; /* green submit size */
+					height: 60px;
+					border-radius: 25px;
+					font-size: 20px;
+					font-weight: 700;
+					font-family: "Lato", sans-serif;
+					color: #fff;
+					text-align: center;
+					background: #67d18a;
+					box-shadow: 7px 7px 8px #cbced1,
+					-7px -7px 8px #ffffff;
+					transition: 0.5s;
+			margin: 0 5px -3px 480px;
+			
+	
+				}
+				.gfg-button:hover {
+					background: #5fb87d;
+				}
+				.gfg-button:active {
+					background: #4a9764;
+				}
+				.gfg-link {
+					padding-top: 20px;
+					text-align: center;
+				}
+				.gfg-link a {
+					text-decoration: none;
+					color: #aaa;
+					font-size: 15px;
+					transition: 0.5s;
+				}
+				.gfg-link a:hover {
+					text-decoration: none;
+					color: #67d18a;
+					font-size: 15px;
+				}
+				.dropdown {
+	  display: inline-block;
+	  position: relative;
+	}
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  width: 100%;
+	  overflow: auto;
+	  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+	}
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	.dropdown-content a {
+	  display: block;
+	  color: #000000;
+	  padding: 5px;
+	  text-decoration: none;
+	}
+	.dropdown-content a:hover {
+	  color: #FFFFFF;
+	  background-color: #00A4BD;
+	} -->
+		<form action="{{url_for('home')}}" method="POST">
+		<div class="gfg-div">
+			<div class="gfg-logo">
+        <div class="gfg-icon">
+          <img src="icon2.png" width="100px" height="100px">
+        </div>
+      </div>
+			<div class="gfg-title">Insurance Data </div>
+			<div class="gfg-sub-title">
+			Please enter the data below
+		</div>
+			<!-- <div class="gfg-input-fields"> 
+				<div class="gfg-email">
+					<svg fill="#999" viewBox="0 0 1024 1024">
+						
+					</svg>
+					<input type="mon" 
+						placeholder="month"/>
+				</div>
+				<div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="WeekOfMonth"/>
+						
+						
+				</div>
+                 <div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="DayOfWeek"
+						placeholder="DayOfWeek" />
+				</div>
+              
+				
+			</div>
+			<div class="gfg-input-fields">
+				<div class="gfg-email">
+					<svg fill="#999" viewBox="0 0 1024 1024">
+						
+					</svg>
+					<input type="mon" 
+						placeholder="month"/>
+				</div>
+				<div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="WeekOfMonth"
+						placeholder="WeekOfMonth" />
+				</div>
+				<div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="WeekOfMonth"
+						placeholder="WeekOfMonth" />
+				</div>
+				
+				
+			</div>
+			<div class="gfg-input-fields">
+				<div class="gfg-email">
+					<svg fill="#999" viewBox="0 0 1024 1024">
+						
+					</svg>
+					<input type="mon" 
+						placeholder="month"/>
+				</div>
+				<div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="WeekOfMonth"
+						placeholder="WeekOfMonth" />
+				</div>
+				<div class="gfg-noname">
+					<svg fill="#999"
+						viewBox="0 0 1024 1024">
+					</svg>
+					<input type="WeekOfMonth"
+						placeholder="WeekOfMonth" />
+				</div> -->
+				<style>
+					.box {
+					  width: 180px;
+					  height: 50px;
+					  border: 1px solid rgb(233, 225, 225);
+					  font-size: 18px;
+					  color: #71bb7c;
+					  background-color: rgb(236, 240, 243);
+					  border-radius: 5px;
+					  box-shadow: 10px 10px 10px rgb(248, 248, 248);
+					}
+				  </style>
+				</head>
+				<body>
+				  <p>Month</p>
+				  <select class="box">
+					<option selected value="a">Jan</option>
+					<option value="b">Feb</option>
+					<option value="c">Mar</option>
+					<option value="d">Apr</option>
+					<option value="e">May</option>
+					<option value="f">Jun</option>
+					<option value="g">Jul</option>
+					<option value="h">Aug</option>
+					<option value="i">Sep</option>
+					<option value="j">Oct</option>
+					<option value="k">Nov</option>
+					<option value="l">Dec</option>
+				  </select>	
+				  <p>WeekOfMonth</p>
+				  <select class="box">
+					<option selected value="a">1</option>
+					<option value="b">2</option>
+					<option value="c">3</option>
+					<option value="d">4</option>
+					<option value="e">5</option>
+				  </select>	
+				  <p>DayOfWeek</p>
+				  <select class="box">
+					<option selected value="a">Monday</option>
+					<option value="b">Tuesday</option>
+					<option value="c">Wednesday</option>
+					<option value="d">Thursday</option>
+					<option value="e">Friday</option>
+					<option value="f">Saturday</option>
+					<option value="g">Sunday</option>
+				  </select>	
+				  <p>Make</p>
+				  <select class="box">
+					<option selected value="a">Accura</option>
+					<option value="b">BMW</option>
+					<option value="c">Chevrolet</option>
+					<option value="d">Dodge</option>
+					<option value="e">Ferrari</option>
+					<option value="f">Ford</option>
+					<option value="g">Honda</option>
+					<option value="h">Jaguar</option>
+					<option value="i">Lexus</option>
+					<option value="j">Mazda</option>
+					<option value="k">Mecedes</option>
+					<option value="l">Mercury</option>
+					<option value="m">Nisson</option>
+					<option value="n">Pontiac</option>
+					<option value="o">Porche</option>
+					<option value="p">Saab</option>
+					<option value="q">Saturn</option>
+					<option value="r">Toyota</option>
+					<option value="s">VW</option>
+				  </select>	
+				  <p>AccidentArea</p>
+				  <select class="box">
+					<option selected value="a">Rural</option>
+					<option value="b">Urban</option>
+				  </select>	
+				  <p>DayOfWeekClaimed</p>
+				  <select class="box">
+					<option selected value="a">Monday</option>
+					<option value="b">Tuesday</option>
+					<option value="c">Wednesday</option>
+					<option value="d">Thursday</option>
+					<option value="e">Friday</option>
+					<option value="f">Saturday</option>
+					<option value="g">Sunday</option>
+				  </select>	
+				  <p>MonthClaimed</p>
+				  <select class="box">
+					<option selected value="a">Jan</option>
+					<option value="b">Feb</option>
+					<option value="c">Mar</option>
+					<option value="d">Apr</option>
+					<option value="e">May</option>
+					<option value="f">Jun</option>
+					<option value="g">Jul</option>
+					<option value="h">Aug</option>
+					<option value="i">Sep</option>
+					<option value="j">Oct</option>
+					<option value="k">Nov</option>
+					<option value="l">Dec</option>
+				  </select>	
+				  <p>WeekOfMonthClaimed</p>
+				  <select class="box">
+					<option selected value="a">1</option>
+					<option value="b">2</option>
+					<option value="c">3</option>
+					<option value="d">4</option>
+					<option value="e">5</option>
+				  </select>	
+				  <p>Sex</p>
+				  <select class="box">
+					<option selected value="a">Male</option>
+					<option value="b">Female</option>
+				  </select>	
+				  <p>MaritalStatus</p>
+				  <select class="box">
+					<option selected value="a">Divorced</option>
+					<option selected value="b">Married</option>
+					<option value="c">Single</option>
+					<option value="d">Widow</option>
+				  </select>	
+				  <p>Fault</p>
+				  <select class="box">
+					<option selected value="a">Policy Holder</option>
+					<option value="b">Third Party</option>
+				  </select>	
+				  <p>PolicyType</p>
+				  <select class="box">
+					<option selected value="a">Sedan - All Perils</option>
+					<option value="b">Sedan - Collision</option>
+					<option value="c">Sedan - Liability</option>
+					<option value="d">Sport - All Perils</option>
+					<option value="e">Sport - Collision</option>
+					<option value="f">Sport - Liability</option>
+					<option value="g">Utility - All Perils</option>
+					<option value="h">Utility - Collision</option>
+					<option value="i">Utility - Liability</option>
+				  </select>	
+				  <p>VehiclePrice</p>
+				  <select class="box">
+					<option selected value="a">20,000 to 29,000</option>
+					<option value="b">30,000 to 39,000</option>
+					<option value="c">40,000 to 59,000</option>
+					<option value="d">60,000 to 69,000</option>
+					<option value="e">more than 69,000</option>
+				  </select>	
+				  <p>Deductible</p>
+				  <select class="box">
+					<option selected value="a">400</option>
+					<option value="b">500</option>
+					<option value="c">700</option>
+				  </select>	
+				  <p>Days:Policy-Accident</p>
+				  <select class="box">
+					<option selected value="a">none</option>
+					<option value="b">1 to 7</option>
+					<option value="c">8 to 15</option>
+					<option value="d">15 to 30</option>
+					<option value="e">more than 30</option>
+				  </select>	
+				  <p>Days:Policy-Claim</p>
+				  <select class="box">
+					<option selected value="a">none</option>
+					<option value="b">8 to 15</option>
+					<option value="c">15 to 30</option>
+					<option value="d">more than 30</option>
+				  </select>	
+				  <p>PastNumberOfClaims</p>
+				  <select class="box">
+					<option selected value="a">none</option>
+					<option value="b">1</option>
+					<option value="c">2 to 4</option>
+					<option value="d">more than 4</option>
+				  </select>	
+				  <p>AgeOfVehicle</p>
+				  <select class="box">
+					<option selected value="a">new</option>
+					<option value="b">2 years</option>
+					<option value="c">3 years</option>
+					<option value="d">4 years</option>
+					<option value="e">5 years</option>
+					<option value="f">6 years</option>
+					<option value="g">7 years</option>
+					<option value="h">more than 7</option>
+				  </select>	
+				  <p>AgeOfPolicyHolder</p>
+				  <select class="box" name="AgeOfPolicyHolder">
+					<option selected >Select AgeOfPolicyHolder</option>
+					<option value="a">16 to 17</option>
+					<option value="b">18 to 20</option>
+					<option value="c">21 to 25</option>
+					<option value="d">26 to 30</option>
+					<option value="e">31 to 35</option>
+					<option value="f">36 to 40</option>
+					<option value="g">41 to 50</option>
+					<option value="h">51 to 65</option>
+					<option value="i">over 65</option>
+				  </select>	
+
+				  <p>PoliceReportFiled</p>
+				  <select class="box">
+					<option selected value="a">No</option>
+					<option value="b">Yes</option>
+				  </select>	
+				  <p>WitnessPresent</p>
+				  <select class="box">
+					<option selected value="a">No</option>
+					<option value="b">Yes</option>
+				  </select>	
+				  <p>AgentType</p>
+				  <select class="box">
+					<option selected value="a">External</option>
+					<option value="b">Internal</option>
+				  </select>	
+				  <p>NumberOfSuppliments</p>
+				  <select class="box">
+					<option selected value="a">none</option>
+					<option value="b">1 to 2</option>
+					<option value="c">3 to 5</option>
+					<option value="d">more than 5</option>
+				  </select>	
+				  <p>AddressChange-Claim</p>
+				  <select class="box">
+					<option selected value="a">no change</option>
+					<option value="b">1 year</option>
+					<option value="c">2 to 3 years</option>
+					<option value="d">4 to 8 years</option>
+					<option value="e">under 6 months</option>
+				  </select>	
+				  <p>NumberOfCars</p>
+				  <select class="box">
+					<option selected value="a">1 vehicle</option>
+					<option value="b">2 vehicles</option>
+					<option value="c">3 to 4</option>
+					<option value="d">5 to 8</option>
+					<option value="e">more than 8</option>
+				  </select>	
+				  
+				 
+
+		</form>
+  <!-- References Dribbble / Twitter -->
+  <!-- <div class='cs-ref'>
+	<a class="cs-dribbble" href="https://dribbble.com/shots/9841583-Neumorphism-UI-DropDown-Menu" target="_blank">
+	  <div id='svgDribbble'></div>
+	</a>
+	<a class="cs-twitter" target="_blank" href="https://twitter.com/CosWiSe">
+	  <div id='svgTwitter'></div>
+	</a>
+  </div>
+
+
+			</div>
+			<button class="gfg-button">
+			Predict</button>
+			
+		</div> -->
+	</body>
+</html>
